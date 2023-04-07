@@ -15,10 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string("nom_complet", 300);
             $table->enum("genre", ["M", "F"])->default("M");
-            $table->date("date_naissance")->nullable();
-            $table->decimal("note", 4, 2);
-            $table->unsignedBigInteger("groupe_id");
-            $table->foreign('groupe_id')->references('id')->on('table_groupes');
             $table->timestamps();
 
         });

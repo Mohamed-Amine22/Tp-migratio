@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/Stager',[Stagers::class,'index']);
+Route::get('/',[Stagers::class,'index'])->name('home');
+Route::get('/edit/{id}',[Stagers::class,'edit']);
+Route::post('/edit/{id}',[Stagers::class,'edit'])->name('updait');

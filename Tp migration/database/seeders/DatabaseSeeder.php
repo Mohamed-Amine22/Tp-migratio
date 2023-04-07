@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         //     groupes::class,
         //     stagiaires::class,
         //     ]);
-        $this->call(filieres::class);
+        $this->call(stagiaires::class);
 
             
     }
