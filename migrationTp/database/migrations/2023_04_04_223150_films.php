@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string("titre");
             $table->string("pays");
             $table->decimal("annee", 8, 2)->default("2023");
-            $table->time("durée");
-            $table->string("genre");
+            $table->time("durée")->nullable();
+            $table->string("genre")->nullable();
             $table->timestamps();
             });
     }
