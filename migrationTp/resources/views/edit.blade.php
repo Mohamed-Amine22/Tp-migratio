@@ -7,6 +7,8 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
+                            <h5 class="card-title text-center">Edit Film</h5>
+
                             <form action="{{route('update', $film->id )}}" method="post">
                                 @csrf
                                 <div class="mb-3">

@@ -11,6 +11,11 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title text-center">Liste Films</h5>
+                        
+                            <a href='/create' class=' border border-2'>
+                                ajoute film 
+                            </a>
+                        
                         <table class="table mb-5" style="marg:10" >
                             <thead>
                               <tr>

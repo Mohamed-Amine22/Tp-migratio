@@ -13,13 +13,13 @@ class FilmController extends Controller
     }
 
     public function create(){
-        return view('createFilm');
+        return view('create');
     }
 
     public function store(Request $req){
         DB::table('films')->insert([
-            'titre'=>$req->title,
-            'pays'=>$req->country,
+            'titre'=>$req->titre,
+            'pays'=>$req->pays,
         ]);
         return redirect()->route('Home');
     }
