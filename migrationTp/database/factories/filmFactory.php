@@ -15,7 +15,7 @@ class filmFactory extends Factory
     public function definition(): array
     {
         return [
-            'titre' => fake()->title(),
+            'titre' => fake()->name(),
             'pays' => fake()->country(),
             
         ];

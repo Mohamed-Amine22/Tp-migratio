@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Liste Films</h5>
                         
-                            <a href='/create' class=' border border-2'>
+                            <a href='{{route("film.create")}}' class='btn btn-primary'>
                                 ajoute film 
                             </a>
                         
@@ -20,9 +20,9 @@
                             <thead>
                               <tr>
                                 <th scope="col">Id</th>
-                                <th scope="col">titre</th>
-                                <th scope="col">pays</th>
-                                <th scope="col">action</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Pays</th>
+                                <th scope="col">Action</th>
                               </tr>
                             </thead>
                             
@@ -35,17 +35,23 @@
                                         <td>{{$film->titre}}</td>
                                         <td>{{$film->pays}}</td>
                                         <td>
-                                            <div class="flex ">
-                                                <a href="/edit/{{$film->id}}">
-                                                    modifier
-                                                </a>
-                                                <form action="{{route('delete',$film->id )}}" method="get">
+                                    
+                                                
+                                                <form action="{{route('film.destroy',$film->id)}}" method="post">
                                                     @csrf
-                                                    <button type="submit">
-                                                        Supprimer
-                                                    </button>
+                                                    @method('DELETE')
+                                                    <div class="flex">
+                                                        <a href="{{route('film.edit',$film->id)}}">
+                                                            <i class="fa-solid fa-pen-to-square"></i>
+                                                        </a>
+                                                        <a href="{{route('film.show',$film->id)}}">
+                                                            <i class="fa-sharp fa-solid fa-circle-info" style="color: #f29c07;"></i>
+                                                        </a>
+                                                        <button style="border:none;background:none"><i class="fa-sharp fa-solid fa-trash" style="color: #ed0707;"></i></button> 
+                                                    </div>
+
                                                 </form>
-                                            </div>
+                                            
                                         </td>
                                     </tr>
                                 @endforeach

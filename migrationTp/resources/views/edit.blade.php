@@ -9,15 +9,16 @@
                         <div class="card-body">
                             <h5 class="card-title text-center">Edit Film</h5>
 
-                            <form action="{{route('update', $film->id )}}" method="post">
+                            <form action="{{route('film.update', $Film->id )}}" method="post">
                                 @csrf
+                                @method('put')
                                 <div class="mb-3">
                                 <label  class="form-label">Titre</label>
-                                <input type="text" value="{{$film->titre}}" class="form-control" name="titre" >
+                                <input type="text" value="{{$Film->titre}}" class="form-control" name="titre" >
                                 </div>
                                 <div class="mb-3">
                                 <label  class="form-label">Pays</label>
-                                <input type="text" value="{{$film->pays}}" class="form-control" name="pays" >
+                                <input type="text" value="{{$Film->pays}}" class="form-control" name="pays" >
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>

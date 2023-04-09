@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title text-center">Add New Film</h5>
-                    <form action="{{route('create')}}" method="post">
+                    <form action="{{route('film.store')}}" method="post">
                         @csrf
                         <div class="mb-3">
                         <label  class="form-label">Titre</label>

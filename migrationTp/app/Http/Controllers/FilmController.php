@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class FilmController extends Controller
 {
-    public function index(){
-        $listfilm = DB::table('films')->get();
-        return view('home',['listfilm'=>$listfilm]);
-    }
+    // public function index(){
+    //     $listfilm = DB::table('films')->get();
+    //     return view('home',['listfilm'=>$listfilm]);
+    // }
 
     public function create(){
         return view('create');
